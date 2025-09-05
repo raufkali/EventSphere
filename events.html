@@ -1,145 +1,193 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EventSphere</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
-<link rel="stylesheet" href="assets/css/styles.css">
-<script src="https://kit.fontawesome.com/a2d9d5d1e7.js" crossorigin="anonymous"></script>
 
-  </head>
-  <body class="d-flex flex-column min-vh-100 gradient-bg">
-    
-<nav class="navbar navbar-expand-lg glassy-nav fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-bolt me-2"></i>EventSphere</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
-      aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarsExample">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EventSphere</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://kit.fontawesome.com/a2d9d5d1e7.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100 gradient-bg">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg glassy-nav fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-bolt me-2"></i>EventSphere</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+        aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
             <a class="nav-link" href="index.html"><i class="fa-solid fa-house me-2"></i>Home</a>
-        </li><li class="nav-item">
-            <a class="nav-link active" href="events.html"><i class="fa-solid fa-calendar-check me-2"></i>Upcoming Events</a>
-        </li><li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="events.html"><i class="fa-solid fa-calendar-check me-2"></i>Upcoming
+              Events</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-2"></i>Contact</a>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-
-    <main class="container py-4">
-      <div class="glassy p-4 rounded-4 mb-4" data-aos="fade-down">
-        <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
-          <h1 class="mb-0"><i class="fa-solid fa-calendar-check me-2"></i>Upcoming Events</h1>
-          <div class="ms-md-auto w-100 w-md-auto" style="max-width:520px;">
-            <div class="input-group">
-              <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-              <input id="searchInput" type="text" class="form-control" placeholder="Search by keyword, city, venue or date">
-              <button id="clearSearch" class="btn btn-outline-secondary"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <small class="text-light-70">Tip: try “AI”, “concert”, “Lahore”, or “Sep”.</small>
+  <!-- Main -->
+  <main class="container py-4">
+    <div class="glassy p-4 rounded-4 mb-4" data-aos="fade-down">
+      <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+        <h1 class="mb-0"><i class="fa-solid fa-calendar-check me-2"></i>Upcoming Events</h1>
+        <div class="ms-md-auto w-100 w-md-auto" style="max-width:520px;">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input id="searchInput" type="text" class="form-control"
+              placeholder="Search by keyword, city, venue or date">
+            <button id="clearSearch" class="btn btn-outline-secondary"><i class="fa-solid fa-xmark"></i></button>
           </div>
+          <small class="text-light-70">Tip: try “AI”, “concert”, “Lahore”, or “Sep”.</small>
         </div>
       </div>
-
-      <div id="eventsGrid" class="row g-4">
-      </div>
-    </main>
-
-    <footer class="mt-auto py-5 text-center text-light">
-  <div class="container">
-    <div class="mb-3">
-      <a href="#" class="social"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" class="social"><i class="fa-brands fa-github"></i></a>
     </div>
-    <p class="mb-0">&copy; 2025 EventSphere. All rights reserved.</p>
-  </div>
-</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-</script>
-<script src="assets/js/app.js"></script>
+    <div id="eventsGrid" class="row g-4"></div>
+  </main>
 
-    <script>
-      const events = [
-        {{slug:'techfest-2025', name:'TechFest 2025', date:'2025-09-15 09:00', venue:'San Francisco Convention Center', city:'San Francisco', 
-         desc:'Annual technology festival featuring startups, AI talks, and networking.',
-         img:'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop',
-         page:'event-techfest-2025.html'}},
-        {{slug:'music-vibes-night', name:'Music Vibes Night', date:'2025-09-25 19:00', venue:'Madison Square Garden', city:'New York',
-         desc:'A live concert night with global artists and DJs.',
-         img:'https://images.unsplash.com/photo-1464375117522-1311d6a5b81a?q=80&w=1200&auto=format&fit=crop',
-         page:'event-music-vibes-night.html'}},
-        {{slug:'devcon-lahore-2025', name:'DevCon Lahore 2025', date:'2025-10-10 10:00', venue:'Expo Center Lahore', city:'Lahore',
-         desc:'Pakistan\'s premier developer conference focusing on web, AI, and cloud.',
-         img:'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop',
-         page:'event-devcon-lahore.html'}},
-        {{slug:'ai-health-summit', name:'AI in Healthcare Summit', date:'2025-11-05 09:30', venue:'Messe Berlin', city:'Berlin',
-         desc:'Explore AI applications in diagnostics, imaging, and patient care.',
-         img:'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1200&auto=format&fit=crop',
-         page:'event-ai-health-summit.html'}},
-        {{slug:'design-week-dubai', name:'Design Week Dubai', date:'2025-12-01 10:00', venue:'Dubai Design District', city:'Dubai',
-         desc:'Immersive experiences in product design, interiors, and architecture.',
-         img:'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop',
-         page:'event-design-week-dubai.html'}},
-        {{slug:'gaming-expo-tokyo', name:'Tokyo Gaming Expo', date:'2026-01-20 10:00', venue:'Tokyo Big Sight', city:'Tokyo',
-         desc:'Hands-on with next-gen consoles, esports finals, and indie showcases.',
-         img:'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop',
-         page:'event-gaming-expo-tokyo.html'}}
-      ];
+  <!-- Footer -->
+  <footer class="mt-auto py-5 text-center text-light">
+    <div class="container">
+      <div class="mb-3">
+        <a href="#" class="social"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 EventSphere. All rights reserved.</p>
+    </div>
+  </footer>
 
-      function renderCards(list) {{ 
-        const grid = document.getElementById('eventsGrid');
-        grid.innerHTML = list.map((e,i)=>`
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="${{i%3*100}}">
-            <a class="card event-card h-100 glassy" href="${{e.page}}">
-              <img src="${{e.img}}" class="card-img-top" alt="${{e.name}}">
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    const events = [
+      {
+        slug: 'techfest-2025',
+        name: 'TechFest 2025',
+        date: '2025-09-15 09:00',
+        venue: 'San Francisco Convention Center',
+        city: 'San Francisco',
+        desc: 'Annual technology festival featuring startups, AI talks, and networking.',
+        img: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop',
+        page: 'event-techfest-2025.html'
+      },
+      {
+        slug: 'music-vibes-night',
+        name: 'Music Vibes Night',
+        date: '2025-09-25 19:00',
+        venue: 'Madison Square Garden',
+        city: 'New York',
+        desc: 'A live concert night with global artists and DJs.',
+        img: './assets/My Love Photo.jpeg',
+        page: 'event-music-vibes-night.html'
+      },
+      {
+        slug: 'devcon-lahore-2025',
+        name: 'DevCon Lahore 2025',
+        date: '2025-10-10 10:00',
+        venue: 'Expo Center Lahore',
+        city: 'Lahore',
+        desc: "Pakistan's premier developer conference focusing on web, AI, and cloud.",
+        img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop',
+        page: 'event-devcon-lahore.html'
+      },
+      {
+        slug: 'ai-health-summit',
+        name: 'AI in Healthcare Summit',
+        date: '2025-11-05 09:30',
+        venue: 'Messe Berlin',
+        city: 'Berlin',
+        desc: 'Explore AI applications in diagnostics, imaging, and patient care.',
+        img: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1200&auto=format&fit=crop',
+        page: 'event-ai-health-summit.html'
+      },
+      {
+        slug: 'design-week-dubai',
+        name: 'Design Week Dubai',
+        date: '2025-12-01 10:00',
+        venue: 'Dubai Design District',
+        city: 'Dubai',
+        desc: 'Immersive experiences in product design, interiors, and architecture.',
+        img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop',
+        page: 'event-design-week-dubai.html'
+      },
+      {
+        slug: 'gaming-expo-tokyo',
+        name: 'Tokyo Gaming Expo',
+        date: '2026-01-20 10:00',
+        venue: 'Tokyo Big Sight',
+        city: 'Tokyo',
+        desc: 'Hands-on with next-gen consoles, esports finals, and indie showcases.',
+        img: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop',
+        page: 'event-gaming-expo-tokyo.html'
+      }
+    ];
+
+    function renderCards(list) {
+      const grid = document.getElementById('eventsGrid');
+      grid.innerHTML = list.map((e, i) => `
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="${i % 3 * 100}">
+            <a class="card event-card h-100 glassy" href="${e.page}">
+              <img src="${e.img}" class="card-img-top" alt="${e.name}">
               <div class="card-body">
-                <h5 class="card-title">${{e.name}}</h5>
-                <p class="card-text small text-light-70"><i class="fa-regular fa-calendar me-1"></i>${{new Date(e.date).toLocaleString([],{{dateStyle:'medium', timeStyle:'short'}})}} • ${{e.city}}</p>
-                <p class="card-text">${{e.desc}}</p>
+                <h5 class="card-title">${e.name}</h5>
+                <p class="card-text small text-light-70"><i class="fa-regular fa-calendar me-1"></i>${new Date(e.date).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })} • ${e.city}</p>
+                <p class="card-text">${e.desc}</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-gradient-primary"><i class="fa-solid fa-location-dot me-1"></i>${{e.venue}}</span>
+                  <span class="badge bg-gradient-primary"><i class="fa-solid fa-location-dot me-1"></i>${e.venue}</span>
                   <span class="btn btn-sm btn-primary">Learn More</span>
                 </div>
               </div>
             </a>
           </div>
         `).join('');
-        AOS.refresh();
-      }}
+      AOS.refresh();
+    }
 
+    renderCards(events);
+
+    const input = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearSearch');
+    input.addEventListener('input', () => {
+      const q = input.value.toLowerCase();
+      const filtered = events.filter(e =>
+        (e.name + ' ' + e.venue + ' ' + e.city + ' ' + e.desc + ' ' + e.date).toLowerCase().includes(q)
+      );
+      renderCards(filtered);
+    });
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
       renderCards(events);
+      input.focus();
+    });
+  </script>
+</body>
 
-      const input = document.getElementById('searchInput');
-      const clearBtn = document.getElementById('clearSearch');
-      input.addEventListener('input', () => {{ 
-        const q = input.value.toLowerCase();
-        const filtered = events.filter(e => 
-          (e.name + ' ' + e.venue + ' ' + e.city + ' ' + e.desc + ' ' + e.date).toLowerCase().includes(q)
-        );
-        renderCards(filtered);
-      }});
-      clearBtn.addEventListener('click', () => {{ input.value=''; renderCards(events); input.focus(); }});
-    </script>
-  </body>
 </html>
