@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EventSphere</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://kit.fontawesome.com/a2d9d5d1e7.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="d-flex flex-column min-vh-100 gradient-bg">
+    
+<nav class="navbar navbar-expand-lg glassy-nav fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-bolt me-2"></i>EventSphere</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+      aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-2"></i>Home</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="events.html"><i class="fa-solid fa-calendar-check me-2"></i>Upcoming Events</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-2"></i>Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <header class="hero container" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3 animate__animated animate__fadeInUp">Discover Upcoming Events</h1>
+          <p class="lead text-light-70">Explore tech conferences, concerts, design weeks, gaming expos, and more — all in one elegant, animated showcase.</p>
+          <div class="d-flex gap-3">
+            <a href="events.html" class="btn btn-primary btn-lg shadow-lg"><i class="fa-solid fa-calendar-days me-2"></i>Browse Events</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg glass-btn"><i class="fa-solid fa-paper-plane me-2"></i>Contact</a>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="hero-card glassy p-4 rounded-4" data-aos="zoom-in">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-stars fa-2x me-3"></i>
+              <h5 class="mb-0">Why EventSphere?</h5>
+            </div>
+            <ul class="list-unstyled lh-lg m-0">
+              <li><i class="fa-solid fa-check me-2"></i> Sleek glassmorphism UI</li>
+              <li><i class="fa-solid fa-check me-2"></i> Responsive & accessible</li>
+              <li><i class="fa-solid fa-check me-2"></i> Smooth scroll animations</li>
+              <li><i class="fa-solid fa-check me-2"></i> Clean, documented code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container py-5">
+      <h2 class="mb-4" data-aos="fade-up"><i class="fa-solid fa-fire-flame-curved me-2"></i>Featured Events</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <a class="card event-card h-100 glassy" href="event-techfest-2025.html">
+            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="TechFest 2025">
+            <div class="card-body">
+              <h5 class="card-title">TechFest 2025</h5>
+              <p class="card-text small text-light-70"><i class="fa-regular fa-calendar me-1"></i>15 Sep 2025 • San Francisco</p>
+              <p class="card-text">Annual technology festival featuring startups, AI talks, and networking.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <a class="card event-card h-100 glassy" href="event-music-vibes-night.html">
+            <img src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81a?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Music Vibes Night">
+            <div class="card-body">
+              <h5 class="card-title">Music Vibes Night</h5>
+              <p class="card-text small text-light-70"><i class="fa-regular fa-calendar me-1"></i>25 Sep 2025 • New York</p>
+              <p class="card-text">A live concert night with global artists and DJs.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <a class="card event-card h-100 glassy" href="event-devcon-lahore.html">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="DevCon Lahore 2025">
+            <div class="card-body">
+              <h5 class="card-title">DevCon Lahore 2025</h5>
+              <p class="card-text small text-light-70"><i class="fa-regular fa-calendar me-1"></i>10 Oct 2025 • Expo Center Lahore</p>
+              <p class="card-text">Pakistan's premier developer conference focusing on web, AI, and cloud.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-auto py-5 text-center text-light">
+  <div class="container">
+    <div class="mb-3">
+      <a href="#" class="social"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="social"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <p class="mb-0">&copy; 2025 EventSphere. All rights reserved.</p>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+<script src="assets/js/app.js"></script>
+
+  </body>
+</html>

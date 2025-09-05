@@ -1,0 +1,49 @@
+:root{
+  --glass-bg: rgba(255,255,255,0.12);
+  --glass-stroke: rgba(255,255,255,0.25);
+  --text-70: rgba(255,255,255,0.7);
+}
+
+*{box-sizing:border-box}
+html, body { font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; color:#f8f9fa; }
+
+.gradient-bg {
+  background: radial-gradient(1200px 600px at 10% 10%, #5b7cfa33, transparent 40%),
+              radial-gradient(900px 500px at 90% 20%, #ff6ec733, transparent 30%),
+              radial-gradient(1000px 600px at 30% 100%, #00e5ff33, transparent 40%),
+              #0f1226;
+  min-height: 100vh;
+}
+
+.text-light-70{ color: var(--text-70) !important; }
+
+.glassy {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-stroke);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.glassy-nav.navbar {
+  background: rgba(15,18,38,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+.navbar-brand { color:#fff; }
+.navbar .nav-link { color:#dfe6ff; }
+.navbar .nav-link.active, .navbar .nav-link:hover { color:#ffffff; }
+
+.hero { padding-top: 120px; padding-bottom: 60px; }
+.hero .lead { color: var(--text-70); }
+
+.event-card { transition: transform .25s ease, box-shadow .25s ease; color:inherit; text-decoration:none; }
+.event-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
+.event-card .card-body .badge { background: linear-gradient(45deg,#6ea8fe,#b197fc); }
+
+.glass-btn { border-color: var(--glass-stroke); }
+
+footer .social { color:#cbd5ff; margin:0 .4rem; font-size:1.25rem; }
+footer .social:hover { color:#fff; }
+
+.object-cover { object-fit: cover; }
